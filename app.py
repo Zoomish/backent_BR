@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__, static_folder='.', static_url_path='')
 allowedOrigins = os.getenv(
     'CORS_ORIGINS',
-    'https://aryzhkova2112-rgb.github.io,http://localhost:5500,http://127.0.0.1:5500'
+    'https://zoomish.github.io,https://aryzhkova2112-rgb.github.io,http://localhost:5500,http://127.0.0.1:5500'
 ).split(',')
 CORS(app, origins=[origin.strip() for origin in allowedOrigins if origin.strip()])
 

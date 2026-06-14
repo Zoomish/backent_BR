@@ -1,0 +1,140 @@
+# ============================================
+# PYTHON
+# ============================================
+
+# Кэш и скомпилированные файлы
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+*.so
+.Python
+
+# Виртуальное окружение
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Дистрибутивы и сборка
+*.egg-info/
+*.egg
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+parts/
+sdist/
+var/
+wheels/
+*.whl
+
+# ============================================
+# ПЕРЕМЕННЫЕ ОКРУЖЕНИЯ (ВАЖНО!)
+# ============================================
+
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+
+# ============================================
+# IDE И РЕДАКТОРЫ
+# ============================================
+
+# PyCharm
+.idea/
+*.iml
+.pycharm_helpers/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-*
+
+# Vim
+*.swp
+*.swo
+*~
+.~*
+
+# Общие
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.temp
+
+# ============================================
+# ЛОГИ И БАЗЫ ДАННЫХ
+# ============================================
+
+# Логи
+*.log
+*.log.*
+logs/
+log/
+
+# Базы данных
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ============================================
+# ТЕСТЫ И ПОКРЫТИЕ
+# ============================================
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+.coverage.xml
+
+# ============================================
+# ВРЕМЕННЫЕ ФАЙЛЫ
+# ============================================
+
+*.tmp
+*.temp
+*.cache
+*.swp
+*.swo
+*~
+
+# ============================================
+# ФРОНТЕНД (опционально)
+# ============================================
+
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# ============================================
+# ОС И СИСТЕМНЫЕ ФАЙЛЫ
+# ============================================
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

@@ -15,14 +15,29 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__, static_folder='.', static_url_path='')
-CORS(app)
+allowedOrigins = os.getenv(
+    'CORS_ORIGINS',
+    'https://aryzhkova2112-rgb.github.io,http://localhost:5500,http://127.0.0.1:5500'
+).split(',')
+CORS(app, origins=[origin.strip() for origin in allowedOrigins if origin.strip()])
 
 
 # ============================================
 # ПОДКЛЮЧЕНИЕ К POSTGRESQL ЧЕРЕЗ
 # ============================================
 def get_db_connection():
-    """Получение соединения с БД из переменных окружения (.env)"""
+    databaseUrl = os.getenv('DATABASE_URL')
+    if databaseUrl:
+        parsed = urlparse(databaseUrl)
+        return psycopg2.connect(
+            host=parsed.hostname,
+            port=parsed.port or 5432,
+            user=parsed.username,
+            password=parsed.password,
+            database=parsed.path.lstrip('/'),
+            sslmode='require'
+        )
+
     return psycopg2.connect(
         host=os.getenv('DB_HOST', 'localhost'),
         port=os.getenv('DB_PORT', 5432),
